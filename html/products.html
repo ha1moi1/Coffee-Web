@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang Sản Phẩm</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../javascript/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="menu-left">
+        <a href="../html/homepage.html" class="active">TRANG CHỦ</a>
+        <a href="">GIỚI THIỆU</a>
+        <a href="">TIN TỨC</a>
+        <a href="">LIÊN HỆ</a>
+        <a href="../html/products.html">SẢN PHẨM</a>
+      </div>
+      <div class="menu-right">
+        <a href="../html/signin.html">ĐĂNG NHẬP</a>
+        <a href="../html/signup.html">ĐĂNG KÝ</a>
+        <a href="../html/cart.html">🛒 Giỏ hàng</a>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <img src="../images/main.jpg" alt="Banner sản phẩm" />
+    </div>
+
+  </header>
+
+  <main>
+    <h1 style="text-align: center;"">Danh sách sản phẩm</h1>
+    <div class="product-list" id="product-list">
+      <!-- Các sản phẩm hiển thị ngang hàng -->
+      <div class="product" data-name="Egg coffee" data-price="2.28" data-image="../images/egg.jpg">
+        <img src="../images/egg.jpg" alt="Egg coffee">
+        <h3>Egg coffee</h3>
+        <p>$2.28</p>
+        <button class="buy-btn">Mua ngay</button>
+      </div>
+
+      <div class="product" data-name="Salt coffee" data-price="1.8" data-image="../images/salt.jpg">
+        <img src="../images/salt.jpg" alt="Salt coffee">
+        <h3>Salt coffee</h3>
+        <p>$1.8</p>
+        <button class="buy-btn">Mua ngay</button>
+      </div>
+
+      <div class="product" data-name="Coconut coffee" data-price="2.7" data-image="../images/coconut.jpg">
+        <img src="../images/coconut.jpg" alt="Coconut coffee">
+        <h3>Coconut coffee</h3>
+        <p>$2.7</p>
+        <button class="buy-btn">Mua ngay</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Popup xác nhận mua hàng -->
+  <div id="popup-overlay" class="overlay hidden"></div>
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span id="close-popup" class="close">&times;</span>
+      <img id="popup-image" src="" alt="">
+      <h2 id="popup-name"></h2>
+      <p>Giá: $<span id="popup-price"></span></p>
+      <div class="quantity-box">
+        <button id="decrease">−</button>
+        <input type="number" id="quantity" value="1" min="1">
+        <button id="increase">+</button>
+      </div>
+      <button id="add-to-cart">Tiến hành thanh toán</button>
+    </div>
+  </div>
+</body>
+</html>
