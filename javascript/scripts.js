@@ -58,7 +58,7 @@ if (addToCartBtn) {
     else cart.push({ ...currentProduct, quantity });
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.href = 'cart.html';
+    window.location.href = '../html/cart.html';
   };
 }
 
